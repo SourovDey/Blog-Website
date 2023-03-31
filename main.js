@@ -18,17 +18,22 @@ function postblog(){
     let imglink = document.querySelector(".imglink");
     let blogTag = document.querySelector(".blogTag");
     let container = document.querySelector(".container");
+     let now = new Date();
+     let mins = now.getMinutes();
+     let hour = now.getHours();
+     let ampm = now.get
 
     if (addtitle.value === ""){
         alert("ADD Title");
+        
     }
-    if(addblog === ""){
+    else if(addblog.value === ""){
         alert("add your blog")
     }
-    if(imglink === ""){
+    else if(imglink.value === ""){
         alert ("Add Feature Image link")
     }
-    if (blogTag === ""){
+    else if (blogTag.value === ""){
         alert ("add blog Tag")
     }
     else{
@@ -46,7 +51,7 @@ function postblog(){
                     <img src="img/03.jpeg" alt="user__image" class="user__image">
                     <div class="user__info">
                         <h5>Sourov Dey</h5>
-                        <small>1min ago</small>
+                        <small>${hour} : ${mins} min</small>
                     </div>
                 </div>
             </div>
